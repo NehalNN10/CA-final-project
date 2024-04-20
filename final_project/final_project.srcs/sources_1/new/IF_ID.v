@@ -21,6 +21,24 @@
 
 
 module IF_ID(
-
+    input clk, reset,
+    input [63:0] PC_Out,
+    input [31:0] Instruction,
+    output reg [63:0] PC_Out_IF_ID,
+    output reg [31:0] Instruction_IF_ID
     );
+    
+    always @(posedge clk or posedge reset) 
+    begin
+        if (reset == 1) 
+            begin
+                Instruction_IF_ID <= 0; 
+                PC_Out_IF_ID <= 0;
+            end
+        else 
+            begin
+                Instruction_IF_ID <= Instruction; 
+                PC_Out_IF_ID <= PC_Out;
+            end
+    end
 endmodule
