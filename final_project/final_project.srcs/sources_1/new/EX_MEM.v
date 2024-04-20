@@ -31,9 +31,9 @@ module EX_MEM(input clk,
 );
 
 always @(posedge clk or posedge reset)
-begin 
-    if (reset == 1)
-    begin
+begin   
+    if (reset == 1)         //reset values to 0 if reset initiated
+    begin   
         EX_MEM_MemRead <= 0;
         EX_MEM_MemWrite <= 0;
         EX_MEM_MemtoReg <= 0;
@@ -43,7 +43,7 @@ begin
         EX_MEM_Write_Data <= 0;
         EX_MEM_RD <= 0;
     end
-    else
+    else                //forward values to register otherwise
     begin
         EX_MEM_MemRead <= MemRead;
         EX_MEM_MemWrite <= MemWrite;

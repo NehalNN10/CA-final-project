@@ -36,7 +36,7 @@ module ID_EX(input clk,
 
 always @(posedge clk or posedge reset)
 begin
-    if (reset == 1)
+    if (reset == 1)         //reset values to 0 if reset initiated
     begin
         ID_EX_Branch <= 0;
         ID_EX_MemRead <= 0;
@@ -54,7 +54,7 @@ begin
         ID_EX_RD <= 0;
         ID_EX_Funct <= 0;
     end
-    else
+    else                //forward values to register otherwise
     begin
         ID_EX_Branch <= Branch;
         ID_EX_MemRead <= MemRead;

@@ -32,7 +32,7 @@ module MEM_WB(
     
     always @(posedge clk or posedge reset) 
     begin
-        if (reset == 1) 
+        if (reset == 1)             //reset values to 0 if reset initiated
         begin
             MemtoReg_MEM_WB <= 0; 
             RegWrite_MEM_WB <= 0; 
@@ -40,7 +40,7 @@ module MEM_WB(
             Result_MEM_WB <= 0; 
             Rd_MEM_WB <= 0;
         end
-        else 
+        else                //forward values to register otherwise
         begin
             MemtoReg_MEM_WB <= MemtoReg; 
             RegWrite_MEM_WB <= RegWrite; 
