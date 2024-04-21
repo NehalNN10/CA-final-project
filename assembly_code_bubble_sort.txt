@@ -1,0 +1,43 @@
+li x15 4
+li x16 3
+li x17 5
+li x18 2
+li x19 1
+
+li x10 0x100
+ li x11 5
+
+sw x15 0(x10)
+sw x16 4(x10)
+sw x17 8(x10)
+sw x18 12(x10)
+sw x19 16(x10)
+
+bubble:
+	li x6, 0 # i = 0 initially
+    outer:
+    	beq x6, x11, exit # if i == 5 then exit
+        sub x7, x5, x6 # x7 stores len(array) - i
+        li x8, 0 # j = 0 every loop
+        inner:
+        	beq x8, x7, innerexit
+            slli x9, x8, 2 # multiply by 4 to get next address
+            # main inner loop stuff here
+            add x28, x10, x9 # mem address of arr[j]
+            addi x29, x28, 4 # mem address of arr[j+1]
+            lw x30, 0(x28) # arr[j]
+            lw x31, 0(x29) # arr[j+1]
+            bge x30, x31, swap
+            # end of main stuff
+            continue:
+                addi x8, x8, 1
+                beq x0, x0, inner
+       	innerexit:
+        	addi x6, x6, 1 # add 1 to i
+        	beq x0, x0, outer # jump back to outer
+        swap:
+        	sw x30, 0(x29)
+            sw x31, 0(x28)
+            beq x0, x0, continue
+
+	exit:
