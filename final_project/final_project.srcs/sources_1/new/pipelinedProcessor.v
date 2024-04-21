@@ -27,7 +27,7 @@ module pipelinedProcessor(input clk,
     output reg [4:0] rs1, rs2, rd,
     output reg [1:0] ALUOp,
     output reg [63:0] adder_out1, adder_out2,
-    output reg Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, addermuxselect,
+    output reg Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero,
     output reg [63:0] index0, index1, index2, index3, index4
     );
     
@@ -41,7 +41,7 @@ module pipelinedProcessor(input clk,
     wire [3:0] Funct, Operation;
     wire [2:0] funct3;
     wire [1:0] ALUOp;
-    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero, addermuxselect, branch_sel;
+    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero;
     wire [63:0] index0, index1, index2, index3, index4;
     
     //wires for IF_ID
@@ -59,7 +59,7 @@ module pipelinedProcessor(input clk,
     
     //wire for EX_MEM
     
-    wire EX_MEM_MemRead, EX_MEM_MemWrite, EX_MEM_MemtoReg, EX_MEM_RegWrite;
+    wire EX_MEM_Branch, EX_MEM_Zero, EX_MEM_MemRead, EX_MEM_MemWrite, EX_MEM_MemtoReg, EX_MEM_RegWrite;
     wire [63:0] EX_MEM_Adder_Out_2, EX_MEM_Result, EX_MEM_Write_Data;
     wire [4:0] EX_MEM_RD;
     
@@ -72,7 +72,7 @@ module pipelinedProcessor(input clk,
     // Instruction Fetch (IF) Modules
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
-    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(ID_EX_Branch&Zero), .Out(PC_In));
+    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(EX_MEM_Branch&EX_MEM_Zero), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -109,12 +109,12 @@ module pipelinedProcessor(input clk,
     Mux_3x1 Mux_3x1_B(.A(ID_EX_ReadData2), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardB), .O(mux_ReadData2));
     Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
     ALU_Control aluc(.ALUOp(ID_EX_ALUOp), .Funct(ID_EX_Funct), .Operation(Operation));
-    ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Result(Result));
+    ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module
-    EX_MEM EXMEM(.clk(clk), .reset(reset), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
+    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(Branch), .Zero(Zero), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
     .RegWrite(ID_EX_RegWrite), .Adder_Out_2(adder_out_2), .Result(Result), .Write_Data(mux_ReadData2), .RD(ID_EX_RD),
-    .EX_MEM_Branch(EX_MEM_Branch), .EX_MEM_MemRead(EX_MEM_MemRead), .EX_MEM_MemWrite(EX_MEM_MemWrite), 
+    .EX_MEM_Branch(EX_MEM_Branch), .EX_MEM_Zero(EX_MEM_Zero), .EX_MEM_MemRead(EX_MEM_MemRead), .EX_MEM_MemWrite(EX_MEM_MemWrite), 
     .EX_MEM_MemtoReg(EX_MEM_MemtoReg), .EX_MEM_RegWrite(EX_MEM_RegWrite), .EX_MEM_Adder_Out_2(EX_MEM_Adder_Out_2), 
     .EX_MEM_Result(EX_MEM_Result), .EX_MEM_Write_Data(EX_MEM_Write_Data), .EX_MEM_RD(EX_MEM_RD));
     

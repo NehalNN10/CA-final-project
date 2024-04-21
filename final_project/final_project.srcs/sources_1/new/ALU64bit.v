@@ -23,6 +23,7 @@ module ALU64bit(
     input [63:0] A,
     input [63:0] B,
     input [3:0] ALUOp,
+    output reg Zero,
     output reg [63:0] Result
     );
     
@@ -35,6 +36,6 @@ always @(*) begin
         4'b1100: Result = ~(A | B); //NOR
         4'b1000: Result = A * (2 ** B); // SLLI
     endcase
-    
+    assign Zero = (Result == 64'b0) ? 1 : 0;   //checking if result is 0 or not   
 end
 endmodule
