@@ -41,7 +41,7 @@ module pipelinedProcessor(input clk,
     wire [3:0] Funct, Operation;
     wire [2:0] funct3;
     wire [1:0] ALUOp;
-    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero;
+    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero, sel_branch;
     wire [63:0] index0, index1, index2, index3, index4;
     
     //wires for IF_ID
@@ -72,7 +72,7 @@ module pipelinedProcessor(input clk,
     // Instruction Fetch (IF) Modules
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
-    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(EX_MEM_Branch&EX_MEM_Zero), .Out(PC_In));
+    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_branch), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -119,6 +119,7 @@ module pipelinedProcessor(input clk,
     .EX_MEM_Result(EX_MEM_Result), .EX_MEM_Write_Data(EX_MEM_Write_Data), .EX_MEM_RD(EX_MEM_RD));
     
     // Memory Access (MEM)
+    assign sel_branch = EX_MEM_Branch && EX_MEM_Zero;
     Data_Memory DM(.clk(clk), .MemWrite(EX_MEM_MemWrite), .MemRead(EX_MEM_MemRead), .Mem_Addr(EX_MEM_Result), 
     .Write_Data(EX_MEM_WriteData), .Read_Data(Read_Data), .index0(index0), .index1(index1), .index2(index2), 
     .index3(index3), .index4(index4));
