@@ -50,17 +50,31 @@ wire MEM_WB_MemtoReg, MEM_WB_RegWrite;
 wire [63:0] MEM_WB_Read_Data, MEM_WB_Result;
 wire [4:0] MEM_WB_RD;
 
+/*
+
+module pipelinedProcessor(input clk,
+    input reset,
+    output reg [63:0] PC_In, PC_Out, ReadData1, ReadData2, WriteData, Result, Read_Data, imm_data,
+    output reg [31:0] Instruction,
+    output reg [6:0] opcode,
+    output reg [4:0] rs1, rs2, rd,
+    output reg [1:0] ALUOp,
+    output reg [63:0] adder_out1, adder_out2,
+    output reg Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero,
+    output reg [63:0] index0, index1, index2, index3, index4
+    );
+*/
+
 pipelinedProcessor pipeline(
-    clk,
-    reset,
-    PC_In, PC_Out, ReadData1, ReadData2, WriteData, Result, Read_Data, imm_data,
-    Instruction,
-    opcode,
-    rs1, rs2, rd,
-    ALUOp,
-    adder_out1, adder_out2,
-    Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, addermuxselect,
-    index0, index1, index2, index3, index4
+     clk, reset,
+     PC_In, PC_Out, ReadData1, ReadData2, WriteData, Result, Read_Data, imm_data,
+     Instruction,
+     opcode,
+     rs1, rs2, rd,
+     ALUOp,
+     adder_out1, adder_out2,
+     Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero,
+     index0, index1, index2, index3, index4
     );
 
 initial begin
