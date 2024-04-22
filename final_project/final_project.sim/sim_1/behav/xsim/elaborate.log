@@ -14,9 +14,9 @@ Compiling module xil_defaultlib.Program_Counter
 Compiling module xil_defaultlib.Instruction_Memory
 Compiling module xil_defaultlib.IF_ID
 Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
 Compiling module xil_defaultlib.Hazard_Detection
 Compiling module xil_defaultlib.Imm_Gen
-Compiling module xil_defaultlib.Control_Unit
 Compiling module xil_defaultlib.RegisterFile
 Compiling module xil_defaultlib.ID_EX
 Compiling module xil_defaultlib.Forwarding_Unit

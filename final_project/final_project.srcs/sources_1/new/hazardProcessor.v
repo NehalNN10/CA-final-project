@@ -70,11 +70,12 @@ module hazardProcessor(
     // Instruction Decode (ID) Modules / Register File Read
     Instruction_Parser IP(.Instruction(IF_ID_Instruction), .Opcode(opcode), .RD(rd), .Funct3(funct3), 
     .RS1(rs1), .RS2(rs2), .Funct7(funct7));
+    Control_Unit cu(.stall(stall), .Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
+    .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
     Hazard_Detection HD( .RS1(rs1), .RS2(rs2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
 //    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
-    Control_Unit cu(.stall(stall), .Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
-    .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
+    
     RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
     .RegWrite(MEM_WB_RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
     assign Funct = {Instruction[30], Instruction[14:12]};
