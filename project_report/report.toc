@@ -1,24 +1,24 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Objective}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Sorting Algorithm}{2}{subsection.1.1.1}%
-\contentsline {chapter}{\numberline {2}Tasks}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Task1}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}RISC V Implementation (single cycle)}{3}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Changes}{3}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Code and Waveform}{4}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Synopsis}{4}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Task2}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Testing 5-Stage/Pipelined RISC V Processor for Sorting Algorithm}{5}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Changes}{5}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Testing Forwarding Unit}{5}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Code and Waveform}{6}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Task 3}{6}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Handling Data Hazards}{6}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Changes}{6}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Code and Waveform}{6}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Synopsis}{6}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}Conclusion and Challenges}{8}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Comparison}{9}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Task Division}{10}{chapter.5}%
-\contentsline {chapter}{\numberline {6}References}{11}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Appendix}{12}{appendix.A}%
+\contentsline {subsection}{\numberline {1.1.1}Sorting Algorithm}{3}{subsection.1.1.1}%
+\contentsline {chapter}{\numberline {2}Tasks}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Task 1}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}RISC V Implementation (single cycle)}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Changes}{5}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Code and Waveform}{6}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Synopsis}{6}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Task2}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Testing 5-Stage/Pipelined RISC V Processor for Sorting Algorithm}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Changes}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Testing Forwarding Unit}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Code and Waveform}{8}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Task 3}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Handling Data Hazards}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Changes}{8}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Code and Waveform}{8}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Synopsis}{8}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}Conclusion and Challenges}{10}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Comparison}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Task Division}{12}{chapter.5}%
+\contentsline {chapter}{\numberline {6}References}{13}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Appendix}{14}{appendix.A}%

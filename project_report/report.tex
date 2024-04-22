@@ -94,10 +94,65 @@
 % \addcontentsline{toc}{section}{Objective}
 \section{Objective}
 
-The objective of this project was to build a 5-stage pipelined processor capable of executing any one array sorting algorithm. For our project, we made use of the bubble sort algorithm. In most cases, the instructions we have already implemented will allow us to run a sorting algorithm program with minor additions. These included:  as implementing bgt or blt instructions to detect when you need to swap two values. This will require some modifications to the circuit.
+The objective of this project was to build a 5-stage pipelined processor capable of executing any one array sorting algorithm. For our project, we made use of the bubble sort algorithm. For the most part, the instructions we already implemented allowed us to run a sorting algorithm program with minor additions. 
+% These included:
+% \begin{itemize}
+%     \item Implementing branch instructions, such as bgt and beq
+%     \item Implementing the slli instruction
+%     \item Testing the processor with the bubble sort algorithm.
+% \end{itemize}
 
+\newpage
 \subsection{Sorting Algorithm}
-We will be using bubble sort to test our processor functionality. Complete Project (\href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/RISC_V_Pipelined_Complete}{RISC V Processor on Github})
+% We will be using bubble sort to test our processor functionality. Complete Project (\href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/RISC_V_Pipelined_Complete}{RISC V Processor on Github})
+
+This is our bubble sort algorithm in RISC-V assembly code:
+
+\begin{verbatim}
+li x15 4
+li x16 3
+li x17 5
+li x18 2
+li x19 1
+
+li x10 0x100
+li x11 5
+
+sw x15 0(x10)
+sw x16 4(x10)
+sw x17 8(x10)
+sw x18 12(x10)
+sw x19 16(x10)
+
+bubble:
+    li x6, 0 # i = 0 initially
+    outer:
+    	beq x6, x11, exit # if i == 5 then exit
+        sub x7, x5, x6 # x7 stores len(array) - i
+        li x8, 0 # j = 0 every loop
+        inner:
+        	beq x8, x7, innerexit
+            slli x9, x8, 2 # multiply by 4 to get next address
+            # main inner loop stuff here
+            add x28, x10, x9 # mem address of arr[j]
+            addi x29, x28, 4 # mem address of arr[j+1]
+            lw x30, 0(x28) # arr[j]
+            lw x31, 0(x29) # arr[j+1]
+            bge x30, x31, swap
+            # end of main stuff
+            continue:
+                addi x8, x8, 1
+                beq x0, x0, inner
+       	innerexit:
+        	addi x6, x6, 1 # add 1 to i
+        	beq x0, x0, outer # jump back to outer
+        swap:
+        	sw x30, 0(x29)
+            sw x31, 0(x28)
+            beq x0, x0, continue
+
+	exit:
+\end{verbatim}
 
 \begin{figure}[h]
     \centering
@@ -107,7 +162,7 @@ We will be using bubble sort to test our processor functionality. Complete Proje
 \end{figure}
 
 \chapter{Tasks}
-\section{Task1}
+\section{Task 1}
 \subsection{RISC V Implementation (single cycle)}
 
     We implemented the converted algorithm on the RISC V single-cycle processor developed in our lab. To make the processor compatible with the algorithm, we made some adjustments to the ALU and instruction memory. Specifically, we added a Branch Unit module to support bgt and blt commands used in the algorithm. Additionally, we introduced an addermuxselect input to control the last mux in the processor. These modifications enabled us to run the sorting algorithm effectively on the RISC V processor.
@@ -199,10 +254,9 @@ Pipelined processors are typically designed to be faster than non-pipelined proc
 
 \chapter{Task Division}
 \begin{itemize}
-    \item {\large \underline{Sadiqah Mushtaq:} Bubble Sort Code and Single Cycle Processor}
-    \item {\large \underline{Lyeba Abid:} Pipelined Processor and Debugging}
-    \item {\large \underline{Ali Muhammad:} Pipelined Processor and Debugging}
-    \item {\large \underline{All Three:} Debugging and Integration}
+    \item {\large \underline{Nehal}: Bubble Sort Code and Single Cycle Processor}
+    \item {\large \underline{Shawaiz and Aina}: Pipelined Processor and Debugging}
+    \item {\large \underline{All Three}: Debugging and Integration}
 \end{itemize}
 
 \chapter{References}

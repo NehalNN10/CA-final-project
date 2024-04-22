@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.12)  22 APR 2024 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.12)  22 APR 2024 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -244,81 +244,81 @@ l.93 \chapter
 Chapter 1.
 [2
 
-]
+] [3] [4]
 Chapter 2.
-[3
+[5
 
-] [4]
-Overfull \hbox (8.51373pt too wide) in paragraph at lines 130--130
+] [6]
+Overfull \hbox (8.51373pt too wide) in paragraph at lines 185--185
 []\OT1/cmr/bx/n/12 Testing 5-Stage/Pipelined RISC V Pro-ces-sor for Sort-
  []
 
 
-Overfull \hbox (0.86168pt too wide) in paragraph at lines 144--145
+Overfull \hbox (0.86168pt too wide) in paragraph at lines 199--200
 []\OT1/cmr/m/n/10 Each stage passes the data and in-struc-tions to the next stage through pipeline
  []
 
-[5] [6] [7]
+[7] [8] [9]
 Chapter 3.
-[8
+[10
 
 ]
 Chapter 4.
-[9
+[11
 
 ]
 Chapter 5.
-[10
+[12
 
 ]
 Chapter 6.
 
-Overfull \hbox (8.20787pt too wide) in paragraph at lines 210--211
+Overfull \hbox (8.20787pt too wide) in paragraph at lines 264--265
 \OT1/cmr/m/n/10 [1] HU-LMS. \OT1/cmr/m/it/10 Can-vas\OT1/cmr/m/n/10 . [On-line] Avail-able: [][]$https : / / hulms . instructure . com / courses /
  []
 
-[11
+[13
 
 ]
 Appendix A.
 
-Overfull \hbox (2.41737pt too wide) in paragraph at lines 219--220
+Overfull \hbox (2.41737pt too wide) in paragraph at lines 273--274
 []\OT1/cmr/m/n/10 Single Cy-cle Pro-ces-sor (Task 1): [][]$https : / / github . com / AliMuhammadAsad /
  []
 
 
-Overfull \hbox (0.66736pt too wide) in paragraph at lines 219--220
+Overfull \hbox (0.66736pt too wide) in paragraph at lines 273--274
 \OT1/cmr/m/n/10 Computer-[]Architecture-[]Spring-[]23 / tree / main / Single % 20Cycle % 20RISC %
  []
 
 
-Overfull \hbox (35.82297pt too wide) in paragraph at lines 220--221
+Overfull \hbox (35.82297pt too wide) in paragraph at lines 274--275
 \OT1/cmr/m/n/10 Computer-[]Architecture-[]Spring-[]23 / tree / main / RISC[]V % 20Pipelined % 20Processor$[][] 
  []
 
 
-Overfull \hbox (1.54515pt too wide) in paragraph at lines 221--222
+Overfull \hbox (1.54515pt too wide) in paragraph at lines 275--276
 \OT1/cmr/m/n/10 AliMuhammadAsad / Computer-[]Architecture-[]Spring-[]23 / tree / main / RISC[]
  []
 
-[12
+[14
 
 ] (report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 832255F2067B758442AB076EC7D46158;3195.
+(rerunfilecheck)             Checksum: 41963C30769C15F17313112A164BA112;3203.
  ) 
 Here is how much of TeX's memory you used:
- 9333 strings out of 476406
- 148141 string characters out of 2790039
- 1858787 words of memory out of 3000000
- 29572 multiletter control sequences out of 15000+600000
- 518742 words of font info for 53 fonts, out of 8000000 for 9000
+ 9338 strings out of 476406
+ 148185 string characters out of 2790039
+ 1861787 words of memory out of 3000000
+ 29574 multiletter control sequences out of 15000+600000
+ 518910 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,700b,449s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Dell\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (13 pages, 127983 bytes).
+ 72i,6n,77p,700b,455s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Dell\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (15 pages, 145614 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
