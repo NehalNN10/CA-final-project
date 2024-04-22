@@ -21,7 +21,7 @@
 
 
 module IF_ID(
-    input clk, reset,stall,
+    input clk, reset, stall,
     input [63:0] PC_Out,
     input [31:0] Instruction,
     output reg [63:0] PC_Out_IF_ID,

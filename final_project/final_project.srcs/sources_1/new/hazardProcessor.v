@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module pipelinedProcessor(
+module hazardProcessor(
     input clk,
     input reset,
     output reg [63:0] PC_In, PC_Out, ReadData1, ReadData2, WriteData, Result, Read_Data, imm_data,
