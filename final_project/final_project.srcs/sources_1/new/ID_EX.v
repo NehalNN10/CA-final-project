@@ -27,11 +27,13 @@ module ID_EX(input clk,
     input [63:0] PC_Out, ReadData1, ReadData2, Imm_Data,
     input [4:0] RS1, RS2, RD,
     input [3:0] Funct,
+    input [2:0] Funct3,
     output reg ID_EX_Branch, ID_EX_MemRead, ID_EX_MemWrite, ID_EX_MemtoReg, ID_EX_ALUSrc, ID_EX_RegWrite,
     output reg [1:0] ID_EX_ALUOp,
     output reg [63:0] ID_EX_PC_Out, ID_EX_ReadData1, ID_EX_ReadData2, ID_EX_Imm_Data,
     output reg [4:0] ID_EX_RS1, ID_EX_RS2, ID_EX_RD,
-    output reg [3:0] ID_EX_Funct
+    output reg [3:0] ID_EX_Funct,
+    output reg [2:0] ID_EX_Funct3
 );
 
 always @(posedge clk or posedge reset)
@@ -53,6 +55,8 @@ begin
         ID_EX_RS2 <= 0;
         ID_EX_RD <= 0;
         ID_EX_Funct <= 0;
+        ID_EX_Funct3 <= 0;
+        
     end
     else                //forward values to register otherwise
     begin
@@ -71,6 +75,7 @@ begin
         ID_EX_RS2 <= RS2;
         ID_EX_RD <= RD;
         ID_EX_Funct <= Funct;
+        ID_EX_Funct3 <= Funct3;
     end
 end
 endmodule

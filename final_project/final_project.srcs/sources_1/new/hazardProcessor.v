@@ -23,7 +23,7 @@ module hazardProcessor(
     wire [3:0] Funct, Operation;
     wire [2:0] funct3;
     wire [1:0] ALUOp;
-    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero, sel_branch, stall;
+    wire Branch, MemRead, MemWrite, MemtoReg, ALUSrc, RegWrite, Zero, sel_Branch, stall;
     wire [63:0] index0, index1, index2, index3, index4;
     
     //wires for IF_ID
@@ -38,6 +38,7 @@ module hazardProcessor(
     wire [63:0] ID_EX_PC_Out, ID_EX_ReadData1, ID_EX_ReadData2, ID_EX_Imm_Data;
     wire [4:0] ID_EX_RS1, ID_EX_RS2, ID_EX_RD;
     wire [3:0] ID_EX_Funct;
+    wire [2:0] ID_EX_Funct3;
     
     //wire for EX_MEM
     
@@ -58,7 +59,7 @@ module hazardProcessor(
     // Instruction Fetch (IF) Modules
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
-    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_branch), .Out(PC_In));
+    Mux_2x1 muxfirst(.A(adder_out1), .B(EX_MEM_Adder_Out_2), .S(EX_MEM_Zero && EX_MEM_Branch), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .stall(stall), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -84,31 +85,31 @@ module hazardProcessor(
     ID_EX IDEX(.clk(clk), .reset(reset), .Branch(Branch), .MemRead(MemRead), .MemWrite(MemWrite), 
     .MemtoReg(MemtoReg), .ALUSrc(ALUSrc), .RegWrite(RegWrite), .ALUOp(ALUOp), .PC_Out(IF_ID_PC_Out), 
     .ReadData1(ReadData1), .ReadData2(ReadData2), .Imm_Data(imm_data), .RS1(rs1), .RS2(rs2), .RD(rd), 
-    .Funct(Funct), .ID_EX_Branch(ID_EX_Branch), .ID_EX_MemRead(ID_EX_MemRead), 
+    .Funct(Funct), .Funct3(funct3), .ID_EX_Branch(ID_EX_Branch), .ID_EX_MemRead(ID_EX_MemRead), 
     .ID_EX_MemWrite(ID_EX_MemWrite), .ID_EX_MemtoReg(ID_EX_MemtoReg), .ID_EX_ALUSrc(ID_EX_ALUSrc), 
     .ID_EX_RegWrite(ID_EX_RegWrite), .ID_EX_ALUOp(ID_EX_ALUOp), .ID_EX_PC_Out(ID_EX_PC_Out), 
     .ID_EX_ReadData1(ID_EX_ReadData1), .ID_EX_ReadData2(ID_EX_ReadData2), .ID_EX_Imm_Data(ID_EX_Imm_Data),
-    .ID_EX_RS1(ID_EX_RS1), .ID_EX_RS2(ID_EX_RS2), .ID_EX_RD(ID_EX_RD),.ID_EX_Funct(ID_EX_Funct));
+    .ID_EX_RS1(ID_EX_RS1), .ID_EX_RS2(ID_EX_RS2), .ID_EX_RD(ID_EX_RD),.ID_EX_Funct(ID_EX_Funct), .ID_EX_Funct3(ID_EX_Funct3));
     
     // Execute (EX) / Address Calculation  
-    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data<<1), .Out(adder_out2));
+    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data*2), .Out(adder_out2));
     Forwarding_Unit FU(ID_EX_RS1, ID_EX_RS2, EX_MEM_RD, MEM_WB_RD, EX_MEM_RegWrite, MEM_WB_RegWrite,
     ForwardA, ForwardB);
     Mux_3x1 Mux_3x1_A(.A(ID_EX_ReadData1), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardA), .O(mux_ReadData1));
     Mux_3x1 Mux_3x1_B(.A(ID_EX_ReadData2), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardB), .O(mux_ReadData2));
     Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
     ALU_Control aluc(.ALUOp(ID_EX_ALUOp), .Funct(ID_EX_Funct), .Operation(Operation));
+    Branch_unit BU(.Funct3(ID_EX_Funct3), .ReadData1(mux_ReadData1), .ReadData2(mux_ReadData2), .addermuxselect(sel_Branch));
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module
-    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(Branch), .Zero(Zero), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
+    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(Branch), .Zero(sel_Branch), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
     .RegWrite(ID_EX_RegWrite), .Adder_Out_2(adder_out2), .Result(Result), .Write_Data(mux_ReadData2), .RD(ID_EX_RD),
     .EX_MEM_Branch(EX_MEM_Branch), .EX_MEM_Zero(EX_MEM_Zero), .EX_MEM_MemRead(EX_MEM_MemRead), .EX_MEM_MemWrite(EX_MEM_MemWrite), 
     .EX_MEM_MemtoReg(EX_MEM_MemtoReg), .EX_MEM_RegWrite(EX_MEM_RegWrite), .EX_MEM_Adder_Out_2(EX_MEM_Adder_Out_2), 
     .EX_MEM_Result(EX_MEM_Result), .EX_MEM_Write_Data(EX_MEM_Write_Data), .EX_MEM_RD(EX_MEM_RD));
     
     // Memory Access (MEM)
-    assign sel_branch = EX_MEM_Branch && EX_MEM_Zero;
     Data_Memory DM(.clk(clk), .MemWrite(EX_MEM_MemWrite), .MemRead(EX_MEM_MemRead), .Mem_Addr(EX_MEM_Result), 
     .Write_Data(EX_MEM_Write_Data), .Read_Data(Read_Data), .index0(index0), .index1(index1), .index2(index2), 
     .index3(index3), .index4(index4));
