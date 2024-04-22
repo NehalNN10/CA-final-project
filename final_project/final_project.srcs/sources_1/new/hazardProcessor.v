@@ -59,7 +59,7 @@ module hazardProcessor(
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
     Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_branch), .Out(PC_In));
-    Program_Counter PC(.clk(clk), .reset(reset), .PC_In(PC_In), .PC_Out(PC_Out));
+    Program_Counter PC(.clk(clk), .reset(reset), .stall(stall), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
     //IF/ID Pipeline Register Module
@@ -73,7 +73,7 @@ module hazardProcessor(
     Hazard_Detection HD( .RS1(RS1), .RS2(RS2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
 //    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
-    Control_Unit cu(.Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
+    Control_Unit cu(.stall(stall), .Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
     .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
     RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
     .RegWrite(MEM_WB_RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
