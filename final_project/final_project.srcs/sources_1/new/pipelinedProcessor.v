@@ -1,25 +1,7 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05/03/2023 11:14:36 PM
-// Design Name: 
-// Module Name: RISCV_Processor
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-module pipelinedProcessor(input clk,
+module pipelinedProcessor(
+    input clk,
     input reset,
     output reg [63:0] PC_In, PC_Out, ReadData1, ReadData2, WriteData, Result, Read_Data, imm_data,
     output reg [31:0] Instruction,
@@ -62,6 +44,7 @@ module pipelinedProcessor(input clk,
     wire EX_MEM_Branch, EX_MEM_Zero, EX_MEM_MemRead, EX_MEM_MemWrite, EX_MEM_MemtoReg, EX_MEM_RegWrite;
     wire [63:0] EX_MEM_Adder_Out_2, EX_MEM_Result, EX_MEM_Write_Data;
     wire [4:0] EX_MEM_RD;
+    wire [1:0] ForwardA, ForwardB;
     
     //wire for MEM_WB
     
@@ -84,6 +67,7 @@ module pipelinedProcessor(input clk,
     // Instruction Decode (ID) Modules / Register File Read
     Instruction_Parser IP(.Instruction(IF_ID_Instruction), .Opcode(opcode), .RD(rd), .Funct3(funct3), 
     .RS1(rs1), .RS2(rs2), .Funct7(funct7));
+//    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Control_Unit cu(.Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
     .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
@@ -94,7 +78,7 @@ module pipelinedProcessor(input clk,
     //ID/EX Pipeline Register Module
     ID_EX IDEX(.clk(clk), .reset(reset), .Branch(Branch), .MemRead(MemRead), .MemWrite(MemWrite), 
     .MemtoReg(MemtoReg), .ALUSrc(ALUSrc), .RegWrite(RegWrite), .ALUOp(ALUOp), .PC_Out(IF_ID_PC_Out), 
-    .ReadData1(ReadData1), .ReadData2(ReadData2), .Imm_Data(imm_data), .RS1(RS1), .RS2(RS2), .RD(RD), 
+    .ReadData1(ReadData1), .ReadData2(ReadData2), .Imm_Data(imm_data), .RS1(rs1), .RS2(rs2), .RD(rd), 
     .Funct(Funct), .ID_EX_Branch(ID_EX_Branch), .ID_EX_MemRead(ID_EX_MemRead), 
     .ID_EX_MemWrite(ID_EX_MemWrite0), .ID_EX_MemtoReg(ID_EX_MemtoReg), .ID_EX_ALUSrc(ID_EX_ALUSrc), 
     .ID_EX_RegWrite(ID_EX_RegWrite), .ID_EX_ALUOp(ID_EX_ALUOp), .ID_EX_PC_Out(ID_EX_PC_Out), 
