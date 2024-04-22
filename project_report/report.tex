@@ -154,24 +154,24 @@ bubble:
 	exit:
 \end{verbatim}
 
-\begin{figure}[h]
-    \centering
-    % \includegraphics[scale = 0.5]{ss1.png}
-    \caption{Registers and Memory}
-    \label{fig: Registers and Memory}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     % \includegraphics[scale = 0.5]{ss1.png}
+%     \caption{Registers and Memory}
+%     \label{fig: Registers and Memory}
+% \end{figure}
 
 \chapter{Tasks}
 \section{Task 1}
 \subsection{RISC V Implementation (single cycle)}
 
-    We implemented the converted algorithm on the RISC V single-cycle processor developed in our lab. To make the processor compatible with the algorithm, we made some adjustments to the ALU and instruction memory. Specifically, we added a Branch Unit module to support bgt and blt commands used in the algorithm. Additionally, we introduced an addermuxselect input to control the last mux in the processor. These modifications enabled us to run the sorting algorithm effectively on the RISC V processor.
+    We implemented the converted algorithm on the RISC V single-cycle processor developed in our lab sessions (from lab 05 till lab 12). To make the processor compatible with the algorithm, we made some adjustments to the ALU and instruction memory. Specifically, we added a Branch Unit module to support the bgt and blt commands used in the algorithm. Additionally, we introduced an addermuxselect input to control the last mux in the processor. This allowed us to change the instruction that was in the program counter from the sequentially next one to one that may have been behind (or ahead, due to branching). These modifications enabled us to run the sorting algorithm effectively on the RISC V processor.
     
 \subsection{Changes}
     We made changes in ALU64 bit and added the funct 3's of blt and bge so that their functionality can be added. Moreover, we added the function for slli. Further, we altered the data memory, and instruction memory. Instruction memory was initialised with dummy values initially. We initialised all to 0 so as to make it function properly. The data memory was initialised with array values for sorting. An entire branch unit module was added to manage branch and output a signal addermuxselect which was then ANDED with branch in the toplevelmodule to give the branch decission.
     \pagebreak
 \subsection{Code and Waveform}
-The link for the code can be found \href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/Single%20Cycle%20RISC%20V%20-%20Project%20Task1}{here}.
+The link for the code can be found \href{https://github.com/NehalNN10/CA-final-project/blob/main/final_project/final_project.srcs/sources_1/new/RISCV_Processor.v}{here}.
 \begin{figure}[h]
     \centering
     % \includegraphics[scale = 0.5]{SIngleCycleSimulation.jpg}
