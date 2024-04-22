@@ -52,6 +52,9 @@ module pipelinedProcessor(
     wire [63:0] MEM_WB_Read_Data, MEM_WB_Result;
     wire [4:0] MEM_WB_RD;
     
+    // extra wires
+    wire [63:0] mux_ReadData1, mux_ReadData2, adder_out_2;
+    
     // Instruction Fetch (IF) Modules
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
@@ -86,7 +89,7 @@ module pipelinedProcessor(
     .ID_EX_RS1(ID_EX_RS1), .ID_EX_RS2(ID_EX_RS2), .ID_EX_RD(ID_EX_RD),.ID_EX_Funct(ID_EX_Funct));
     
     // Execute (EX) / Address Calculation  
-    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data<<1), .Out(adder_out2));
+    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data<<1), .Out(adder_out_2));
     Forwarding_Unit FU(ID_EX_RS1, ID_EX_RS2, EX_MEM_RD, MEM_WB_RD, EX_MEM_RegWrite, MEM_WB_RegWrite,
     ForwardA, ForwardB);
     Mux_3x1 Mux_3x1_A(.A(ID_EX_ReadData1), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardA), .O(mux_ReadData1));
