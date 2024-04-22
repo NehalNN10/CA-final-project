@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.12)  19 APR 2024 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.12)  22 APR 2024 14:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -85,6 +85,7 @@ File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
+Package hyperref Info: Option `breaklinks' set `true' on input line 4045.
 Package hyperref Info: Hyper figures OFF on input line 4162.
 Package hyperref Info: Link nesting OFF on input line 4167.
 Package hyperref Info: Hyper index ON on input line 4170.
@@ -139,11 +140,185 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip50
+) (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count271
+\lst@gtempboxa=\box51
+\lst@token=\toks19
+\lst@length=\count272
+\lst@currlwidth=\dimen145
+\lst@column=\count273
+\lst@pos=\count274
+\lst@lostspace=\dimen146
+\lst@width=\dimen147
+\lst@newlines=\count275
+\lst@lineno=\count276
+\lst@maxwidth=\dimen148
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count277
+\lst@skipnumbers=\count278
+\lst@framebox=\box52
+) (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box53
+) (report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
+Package color Info: Driver file: pdftex.def on input line 149.
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+ (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count280
+\scratchdimen=\dimen149
+\scratchbox=\box54
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen150
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks21
+)) (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 88.
+ (report.out) (report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
 
-! LaTeX Error: File `hyphenat.sty' not found.
+\c@lstlisting=\count286
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 90.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 90.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 90.
+ [1
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+{C:/Users/Dell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (report.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+)
+\tf@toc=\write4
+\openout4 = `report.toc'.
 
-Enter file name: 
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.93 \chapter
+             {Introduction} [1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+[3
+
+] [4]
+Overfull \hbox (8.51373pt too wide) in paragraph at lines 130--130
+[]\OT1/cmr/bx/n/12 Testing 5-Stage/Pipelined RISC V Pro-ces-sor for Sort-
+ []
+
+
+Overfull \hbox (0.86168pt too wide) in paragraph at lines 144--145
+[]\OT1/cmr/m/n/10 Each stage passes the data and in-struc-tions to the next stage through pipeline
+ []
+
+[5] [6] [7]
+Chapter 3.
+[8
+
+]
+Chapter 4.
+[9
+
+]
+Chapter 5.
+[10
+
+]
+Chapter 6.
+
+Overfull \hbox (8.20787pt too wide) in paragraph at lines 210--211
+\OT1/cmr/m/n/10 [1] HU-LMS. \OT1/cmr/m/it/10 Can-vas\OT1/cmr/m/n/10 . [On-line] Avail-able: [][]$https : / / hulms . instructure . com / courses /
+ []
+
+[11
+
+]
+Appendix A.
+
+Overfull \hbox (2.41737pt too wide) in paragraph at lines 219--220
+[]\OT1/cmr/m/n/10 Single Cy-cle Pro-ces-sor (Task 1): [][]$https : / / github . com / AliMuhammadAsad /
+ []
+
+
+Overfull \hbox (0.66736pt too wide) in paragraph at lines 219--220
+\OT1/cmr/m/n/10 Computer-[]Architecture-[]Spring-[]23 / tree / main / Single % 20Cycle % 20RISC %
+ []
+
+
+Overfull \hbox (35.82297pt too wide) in paragraph at lines 220--221
+\OT1/cmr/m/n/10 Computer-[]Architecture-[]Spring-[]23 / tree / main / RISC[]V % 20Pipelined % 20Processor$[][] 
+ []
+
+
+Overfull \hbox (1.54515pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/10 AliMuhammadAsad / Computer-[]Architecture-[]Spring-[]23 / tree / main / RISC[]
+ []
+
+[12
+
+] (report.aux)
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 832255F2067B758442AB076EC7D46158;3195.
+ ) 
+Here is how much of TeX's memory you used:
+ 9333 strings out of 476406
+ 148141 string characters out of 2790039
+ 1858787 words of memory out of 3000000
+ 29572 multiletter control sequences out of 15000+600000
+ 518742 words of font info for 53 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,6n,77p,700b,449s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Dell\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (13 pages, 127983 bytes).
+PDF statistics:
+ 241 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+
