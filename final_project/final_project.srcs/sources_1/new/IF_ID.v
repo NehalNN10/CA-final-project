@@ -21,7 +21,7 @@
 
 
 module IF_ID(
-    input clk, reset,
+    input clk, reset,stall,
     input [63:0] PC_Out,
     input [31:0] Instruction,
     output reg [63:0] PC_Out_IF_ID,
@@ -34,6 +34,11 @@ module IF_ID(
             begin
                 Instruction_IF_ID <= 0; 
                 PC_Out_IF_ID <= 0;
+            end
+         else if (stall == 1) 
+            begin
+                PC_Out_IF_ID <= PC_Out_IF_ID; 
+                Instruction_IF_ID <= Instruction_IF_ID;
             end
         else                //forward values to register otherwise
             begin
