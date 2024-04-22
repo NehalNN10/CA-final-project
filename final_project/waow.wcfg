@@ -3,125 +3,315 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="testbench_pipelinedProcessor_behav.wdb" id="1">
+      <db_ref path="tbHazard_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="testbench_pipelinedProcessor" />
+            <top_module name="tbHazard" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="901fs"></ZoomStartTime>
-      <ZoomEndTime time="255774fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="217750fs"></ZoomStartTime>
+      <ZoomEndTime time="291251fs"></ZoomEndTime>
+      <Cursor1Time time="235000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="331"></NameColumnWidth>
-      <ValueColumnWidth column_width="156"></ValueColumnWidth>
+      <NameColumnWidth column_width="273"></NameColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
-   <wvobject fp_name="/testbench_pipelinedProcessor/clk" type="logic">
+   <WVObjectSize size="73" />
+   <wvobject fp_name="/tbHazard/HP/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/reset" type="logic">
+   <wvobject fp_name="/tbHazard/HP/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/PC_In" type="array">
+   <wvobject fp_name="/tbHazard/HP/PC_In" type="array">
       <obj_property name="ElementShortName">PC_In[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC_In[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/PC_Out" type="array">
+   <wvobject fp_name="/tbHazard/HP/PC_Out" type="array">
       <obj_property name="ElementShortName">PC_Out[63:0]</obj_property>
       <obj_property name="ObjectShortName">PC_Out[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/adder_out1" type="array">
-      <obj_property name="ElementShortName">adder_out1[63:0]</obj_property>
-      <obj_property name="ObjectShortName">adder_out1[63:0]</obj_property>
+   <wvobject fp_name="/tbHazard/HP/stall" type="logic">
+      <obj_property name="ElementShortName">stall</obj_property>
+      <obj_property name="ObjectShortName">stall</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/adder_out2" type="array">
-      <obj_property name="ElementShortName">adder_out2[63:0]</obj_property>
-      <obj_property name="ObjectShortName">adder_out2[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/imm_data" type="array">
-      <obj_property name="ElementShortName">imm_data[63:0]</obj_property>
-      <obj_property name="ObjectShortName">imm_data[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/WriteData" type="array">
-      <obj_property name="ElementShortName">WriteData[63:0]</obj_property>
-      <obj_property name="ObjectShortName">WriteData[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/ReadData1" type="array">
+   <wvobject fp_name="/tbHazard/HP/ReadData1" type="array">
       <obj_property name="ElementShortName">ReadData1[63:0]</obj_property>
       <obj_property name="ObjectShortName">ReadData1[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/ReadData2" type="array">
+   <wvobject fp_name="/tbHazard/HP/ReadData2" type="array">
       <obj_property name="ElementShortName">ReadData2[63:0]</obj_property>
       <obj_property name="ObjectShortName">ReadData2[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/Result" type="array">
+   <wvobject fp_name="/tbHazard/HP/WriteData" type="array">
+      <obj_property name="ElementShortName">WriteData[63:0]</obj_property>
+      <obj_property name="ObjectShortName">WriteData[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/Result" type="array">
       <obj_property name="ElementShortName">Result[63:0]</obj_property>
       <obj_property name="ObjectShortName">Result[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/Read_Data" type="array">
+   <wvobject fp_name="/tbHazard/HP/Read_Data" type="array">
       <obj_property name="ElementShortName">Read_Data[63:0]</obj_property>
       <obj_property name="ObjectShortName">Read_Data[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/Instruction" type="array">
+   <wvobject fp_name="/tbHazard/HP/imm_data" type="array">
+      <obj_property name="ElementShortName">imm_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/Instruction" type="array">
       <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
       <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/opcode" type="array">
+   <wvobject fp_name="/tbHazard/HP/opcode" type="array">
       <obj_property name="ElementShortName">opcode[6:0]</obj_property>
       <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/funct7" type="array">
-      <obj_property name="ElementShortName">funct7[6:0]</obj_property>
-      <obj_property name="ObjectShortName">funct7[6:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/rd" type="array">
-      <obj_property name="ElementShortName">rd[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/rs1" type="array">
+   <wvobject fp_name="/tbHazard/HP/rs1" type="array">
       <obj_property name="ElementShortName">rs1[4:0]</obj_property>
       <obj_property name="ObjectShortName">rs1[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/rs2" type="array">
+   <wvobject fp_name="/tbHazard/HP/rs2" type="array">
       <obj_property name="ElementShortName">rs2[4:0]</obj_property>
       <obj_property name="ObjectShortName">rs2[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/ALUOp" type="array">
+   <wvobject fp_name="/tbHazard/HP/rd" type="array">
+      <obj_property name="ElementShortName">rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ALUOp" type="array">
       <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
       <obj_property name="ObjectShortName">ALUOp[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/Branch" type="logic">
+   <wvobject fp_name="/tbHazard/HP/adder_out1" type="array">
+      <obj_property name="ElementShortName">adder_out1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/adder_out2" type="array">
+      <obj_property name="ElementShortName">adder_out2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">adder_out2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/Branch" type="logic">
       <obj_property name="ElementShortName">Branch</obj_property>
       <obj_property name="ObjectShortName">Branch</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/MemRead" type="logic">
+   <wvobject fp_name="/tbHazard/HP/MemRead" type="logic">
       <obj_property name="ElementShortName">MemRead</obj_property>
       <obj_property name="ObjectShortName">MemRead</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/MemWrite" type="logic">
+   <wvobject fp_name="/tbHazard/HP/MemWrite" type="logic">
       <obj_property name="ElementShortName">MemWrite</obj_property>
       <obj_property name="ObjectShortName">MemWrite</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/MemtoReg" type="logic">
+   <wvobject fp_name="/tbHazard/HP/MemtoReg" type="logic">
       <obj_property name="ElementShortName">MemtoReg</obj_property>
       <obj_property name="ObjectShortName">MemtoReg</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/ALUSrc" type="logic">
+   <wvobject fp_name="/tbHazard/HP/ALUSrc" type="logic">
       <obj_property name="ElementShortName">ALUSrc</obj_property>
       <obj_property name="ObjectShortName">ALUSrc</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/RegWrite" type="logic">
+   <wvobject fp_name="/tbHazard/HP/RegWrite" type="logic">
       <obj_property name="ElementShortName">RegWrite</obj_property>
       <obj_property name="ObjectShortName">RegWrite</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench_pipelinedProcessor/Zero" type="logic">
+   <wvobject fp_name="/tbHazard/HP/Zero" type="logic">
       <obj_property name="ElementShortName">Zero</obj_property>
       <obj_property name="ObjectShortName">Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/index0" type="array">
+      <obj_property name="ElementShortName">index0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">index0[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/index1" type="array">
+      <obj_property name="ElementShortName">index1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">index1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/index2" type="array">
+      <obj_property name="ElementShortName">index2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">index2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/index3" type="array">
+      <obj_property name="ElementShortName">index3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">index3[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/index4" type="array">
+      <obj_property name="ElementShortName">index4[63:0]</obj_property>
+      <obj_property name="ObjectShortName">index4[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/muxmid_out" type="array">
+      <obj_property name="ElementShortName">muxmid_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">muxmid_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/funct7" type="array">
+      <obj_property name="ElementShortName">funct7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">funct7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/Funct" type="array">
+      <obj_property name="ElementShortName">Funct[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Funct[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/Operation" type="array">
+      <obj_property name="ElementShortName">Operation[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Operation[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/funct3" type="array">
+      <obj_property name="ElementShortName">funct3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">funct3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/sel_branch" type="logic">
+      <obj_property name="ElementShortName">sel_branch</obj_property>
+      <obj_property name="ObjectShortName">sel_branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/IF_ID_Instruction" type="array">
+      <obj_property name="ElementShortName">IF_ID_Instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IF_ID_Instruction[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/IF_ID_PC_Out" type="array">
+      <obj_property name="ElementShortName">IF_ID_PC_Out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">IF_ID_PC_Out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_Branch" type="logic">
+      <obj_property name="ElementShortName">ID_EX_Branch</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_Branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_MemRead" type="logic">
+      <obj_property name="ElementShortName">ID_EX_MemRead</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_MemWrite" type="logic">
+      <obj_property name="ElementShortName">ID_EX_MemWrite</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_MemtoReg" type="logic">
+      <obj_property name="ElementShortName">ID_EX_MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_MemtoReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_ALUSrc" type="logic">
+      <obj_property name="ElementShortName">ID_EX_ALUSrc</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_ALUSrc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_RegWrite" type="logic">
+      <obj_property name="ElementShortName">ID_EX_RegWrite</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_ALUOp" type="array">
+      <obj_property name="ElementShortName">ID_EX_ALUOp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_ALUOp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_PC_Out" type="array">
+      <obj_property name="ElementShortName">ID_EX_PC_Out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_PC_Out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_ReadData1" type="array">
+      <obj_property name="ElementShortName">ID_EX_ReadData1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_ReadData1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_ReadData2" type="array">
+      <obj_property name="ElementShortName">ID_EX_ReadData2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_ReadData2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_Imm_Data" type="array">
+      <obj_property name="ElementShortName">ID_EX_Imm_Data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_Imm_Data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_RS1" type="array">
+      <obj_property name="ElementShortName">ID_EX_RS1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RS1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_RS2" type="array">
+      <obj_property name="ElementShortName">ID_EX_RS2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RS2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_RD" type="array">
+      <obj_property name="ElementShortName">ID_EX_RD[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_RD[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ID_EX_Funct" type="array">
+      <obj_property name="ElementShortName">ID_EX_Funct[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_Funct[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_Branch" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_Branch</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_Branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_Zero" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_Zero</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_Zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_MemRead" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_MemRead</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_MemWrite" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_MemWrite</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_MemtoReg" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_MemtoReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_RegWrite" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_RegWrite</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_Adder_Out_2" type="array">
+      <obj_property name="ElementShortName">EX_MEM_Adder_Out_2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_Adder_Out_2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_Result" type="array">
+      <obj_property name="ElementShortName">EX_MEM_Result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_Result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_Write_Data" type="array">
+      <obj_property name="ElementShortName">EX_MEM_Write_Data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_Write_Data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/EX_MEM_RD" type="array">
+      <obj_property name="ElementShortName">EX_MEM_RD[4:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_RD[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ForwardA" type="array">
+      <obj_property name="ElementShortName">ForwardA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/ForwardB" type="array">
+      <obj_property name="ElementShortName">ForwardB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ForwardB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/MEM_WB_MemtoReg" type="logic">
+      <obj_property name="ElementShortName">MEM_WB_MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_MemtoReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/MEM_WB_RegWrite" type="logic">
+      <obj_property name="ElementShortName">MEM_WB_RegWrite</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/MEM_WB_Read_Data" type="array">
+      <obj_property name="ElementShortName">MEM_WB_Read_Data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_Read_Data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/MEM_WB_Result" type="array">
+      <obj_property name="ElementShortName">MEM_WB_Result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_Result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/MEM_WB_RD" type="array">
+      <obj_property name="ElementShortName">MEM_WB_RD[4:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_RD[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/mux_ReadData1" type="array">
+      <obj_property name="ElementShortName">mux_ReadData1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_ReadData1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbHazard/HP/mux_ReadData2" type="array">
+      <obj_property name="ElementShortName">mux_ReadData2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_ReadData2[63:0]</obj_property>
    </wvobject>
 </wave_config>

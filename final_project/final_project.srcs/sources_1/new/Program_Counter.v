@@ -34,8 +34,8 @@ module Program_Counter(
 initial
 	PC_Out=64'd0;
 	always @ (posedge clk or posedge reset) begin
-	   if (reset == 1'b1) PC_Out = 64'b0;
-	   else if (stall == 1'b1) PC_Out = PC_Out;
-	   else PC_Out = PC_In;
+	   if (reset == 1'b1) PC_Out <= 64'b0;
+	   else if (stall == 1'b1) PC_Out <= PC_Out;
+	   else PC_Out <= PC_In;
 	end
 endmodule

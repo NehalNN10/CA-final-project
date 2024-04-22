@@ -70,7 +70,7 @@ module hazardProcessor(
     // Instruction Decode (ID) Modules / Register File Read
     Instruction_Parser IP(.Instruction(IF_ID_Instruction), .Opcode(opcode), .RD(rd), .Funct3(funct3), 
     .RS1(rs1), .RS2(rs2), .Funct7(funct7));
-    Hazard_Detection HD( .RS1(RS1), .RS2(RS2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
+    Hazard_Detection HD( .RS1(rs1), .RS2(rs2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
 //    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Control_Unit cu(.stall(stall), .Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
