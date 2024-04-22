@@ -36,6 +36,9 @@ always @(*) begin
         4'b1100: Result = ~(A | B); //NOR
         4'b1000: Result = A * (2 ** B); // SLLI
     endcase
-    assign Zero = (Result == 64'b0) ? 1 : 0;   //checking if result is 0 or not   
+    if (Result == 64'd0) Zero = 1'b1;
+    else Zero = 1'b0;   //checking if result is 0 or not   
 end
 endmodule
+
+
