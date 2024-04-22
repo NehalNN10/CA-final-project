@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Apr 21 15:46:32 2024
+# Process ID: 16968
+# Current directory: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3240 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
+# Log file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.log
+# Journal file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_ALU.v} w ]
+add_files -fileset sim_1 {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_ALU.v}}
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_ALU [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+source tb_ALU.tcl
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testbench_pipelinedProcessor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+source testbench_pipelinedProcessor.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim

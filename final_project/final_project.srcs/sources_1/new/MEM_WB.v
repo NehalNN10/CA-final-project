@@ -37,6 +37,7 @@ module MEM_WB(
             MemtoReg_MEM_WB <= 0; 
             RegWrite_MEM_WB <= 0; 
             Rd_MEM_WB <= 0;
+            Read_Data_MEM_WB <= 0;
             Result_MEM_WB <= 0; 
             Rd_MEM_WB <= 0;
         end
@@ -45,8 +46,9 @@ module MEM_WB(
             MemtoReg_MEM_WB <= MemtoReg; 
             RegWrite_MEM_WB <= RegWrite; 
             Rd_MEM_WB <= Rd_EX_MEM;
+            Read_Data_MEM_WB <= Read_Data;
             Result_MEM_WB <= Result_EX_MEM; 
-            Rd_MEM_WB <= Read_Data;
+            Rd_MEM_WB <= Rd_EX_MEM;
         end 
     end
 endmodule

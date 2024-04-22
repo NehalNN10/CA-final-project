@@ -74,8 +74,8 @@ module pipelinedProcessor(
     Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Control_Unit cu(.Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
     .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
-    RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(rd), 
-    .RegWrite(RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
+    RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
+    .RegWrite(MEM_WB_RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
     assign Funct = {Instruction[30], Instruction[14:12]};
     
     //ID/EX Pipeline Register Module

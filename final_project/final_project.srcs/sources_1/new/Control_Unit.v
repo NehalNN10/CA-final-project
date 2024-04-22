@@ -20,7 +20,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Control_Unit(
-    input stall,
     input [6:0] Opcode,
     output reg [1:0] ALUOp,
     output reg Branch,
@@ -57,10 +56,6 @@ always @(*) begin
             Branch = 1'b0; MemRead = 1'b0; MemtoReg = 1'b0; ALUOp = 2'b00;
             MemWrite = 1'b0; ALUSrc = 1'b0; RegWrite = 1'b0;
         end
-    endcase 
-    if (stall == 1'b1) begin
-        Branch = 1'b0; MemRead = 1'b0; MemtoReg = 1'b0; ALUOp = 2'b00;
-        MemWrite = 1'b0; ALUSrc = 1'b0; RegWrite = 1'b0;
-    end
+    endcase
 end
 endmodule

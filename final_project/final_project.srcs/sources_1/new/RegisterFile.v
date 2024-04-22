@@ -35,7 +35,7 @@ reg[63:0] Registers [31:0];    //initialize Registers with random values (using 
 integer i;
   initial
     begin
-      for (i=0; i<31; i=i+1)
+      for (i=0; i<=31; i=i+1)
         begin
           Registers[i] = 0;
         end
