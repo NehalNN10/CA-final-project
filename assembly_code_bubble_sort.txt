@@ -4,7 +4,7 @@ li x17 5
 li x18 2
 li x19 1
 
-li x10 0x100
+li x10 0x4
  li x11 5
 
 sw x15 0(x10)

@@ -75,7 +75,7 @@ module hazardProcessor(
     .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
     Hazard_Detection HD( .RS1(rs1), .RS2(rs2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
 //    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
-    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
+    Imm_Gen Immgen(.Instruction(IF_ID_Instruction), .Imm(imm_data));
     
     RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
     .RegWrite(MEM_WB_RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
@@ -97,7 +97,8 @@ module hazardProcessor(
     ForwardA, ForwardB);
     Mux_3x1 Mux_3x1_A(.A(ID_EX_ReadData1), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardA), .O(mux_ReadData1));
     Mux_3x1 Mux_3x1_B(.A(ID_EX_ReadData2), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardB), .O(mux_ReadData2));
-    Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
+    Mux_2x1 muxmid(.A(ID_EX_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
+//    Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ALUSrc), .Out(muxmid_out));
     ALU_Control aluc(.ALUOp(ID_EX_ALUOp), .Funct(ID_EX_Funct), .Operation(Operation));
     Branch_unit BU(.Funct3(ID_EX_Funct3), .ReadData1(mux_ReadData1), .ReadData2(mux_ReadData2), .addermuxselect(sel_Branch));
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
