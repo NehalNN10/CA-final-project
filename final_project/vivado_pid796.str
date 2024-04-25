@@ -1,0 +1,111 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 796
+License: Customer
+
+Current time: 	Wed Apr 24 17:49:06 PKT 2024
+Time zone: 	Pakistan Standard Time (Asia/Karachi)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 3840x2160
+Screen resolution (DPI): 250
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=30
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Shafqat Ali Khan
+User home directory: C:/Users/Shafqat Ali Khan
+User working directory: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2020.1
+RDI_DATADIR: D:/Vivado/2020.1/data
+RDI_BINDIR: D:/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Shafqat Ali Khan/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Shafqat Ali Khan/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Shafqat Ali Khan/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.log
+Vivado journal file location: 	C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.jou
+Engine tmp dir: 	C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/.Xil/Vivado-796-LAPTOP-5AKTRA29
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2020.1
+XILINX_VIVADO: D:/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Vivado/2020.1
+
+
+GUI allocated memory:	169 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,017 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1316 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/Dell/Documents/uni_docs/cs/computer architecture/final_project/final_project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,017 MB. GUI used memory: 85 MB. Current time: 4/24/24, 5:49:07 PM PKT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 94 MB (+95619kb) [00:00:22]
+// [Engine Memory]: 1,017 MB (+914614kb) [00:00:22]
+// [GUI Memory]: 106 MB (+8178kb) [00:00:22]
+// [GUI Memory]: 129 MB (+18004kb) [00:00:23]
+// [GUI Memory]: 139 MB (+3876kb) [00:00:25]
+// WARNING: HEventQueue.dispatchEvent() is taking  5862 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.1/data/ip'. 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bz)
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bz)
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1025.016 ; gain = 0.000 
+// Project name: final_project; location: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bz (cs)
+closeMainWindow("final_project - [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr] - Vivado 2020.1"); // cs
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

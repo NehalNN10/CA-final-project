@@ -59,7 +59,7 @@ module pipelinedProcessor(
     // Instruction Fetch (IF) Modules
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
-    Mux_2x1 muxfirst(.A(adder_out1), .B(EX_MEM_Adder_Out_2), .S(EX_MEM_Zero && EX_MEM_Branch), .Out(PC_In));
+    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_Branch && ID_EX_Branch), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -71,7 +71,7 @@ module pipelinedProcessor(
     // Instruction Decode (ID) Modules / Register File Read
     Instruction_Parser IP(.Instruction(IF_ID_Instruction), .Opcode(opcode), .RD(rd), .Funct3(funct3), 
     .RS1(rs1), .RS2(rs2), .Funct7(funct7));
-    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
+    Imm_Gen Immgen(.Instruction(IF_ID_Instruction), .Imm(imm_data));
     Control_Unit cu(.Opcode(opcode), .Branch(Branch), .MemRead(MemRead), .MemtoReg(MemtoReg), .ALUOp(ALUOp), 
     .MemWrite(MemWrite), .ALUSrc(ALUSrc), .RegWrite(RegWrite));
     RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
@@ -100,7 +100,7 @@ module pipelinedProcessor(
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module
-    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(Branch), .Zero(sel_Branch), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
+    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(ID_EX_Branch), .Zero(sel_Branch), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
     .RegWrite(ID_EX_RegWrite), .Adder_Out_2(adder_out2), .Result(Result), .Write_Data(mux_ReadData2), .RD(ID_EX_RD),
     .EX_MEM_Branch(EX_MEM_Branch), .EX_MEM_Zero(EX_MEM_Zero), .EX_MEM_MemRead(EX_MEM_MemRead), .EX_MEM_MemWrite(EX_MEM_MemWrite), 
     .EX_MEM_MemtoReg(EX_MEM_MemtoReg), .EX_MEM_RegWrite(EX_MEM_RegWrite), .EX_MEM_Adder_Out_2(EX_MEM_Adder_Out_2), 

@@ -2,16 +2,16 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Apr 24 17:48:42 2024
-# Process ID: 796
+# Start of session at: Mon Apr 22 22:06:41 2024
+# Process ID: 24252
 # Current directory: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2508 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9680 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
 # Log file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.log
 # Journal file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr}
-r}
+update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
@@ -21,11 +21,15 @@ set_property top_lib xil_defaultlib [get_filesets sim_1]
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
 launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
 source testbench_pipelinedProcessor.tcl
 save_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+relaunch_sim
 close_sim
 launch_simulation
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
@@ -38,6 +42,39 @@ open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
 source testbench_pipelinedProcessor.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source testbench_pipelinedProcessor.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source testbench_pipelinedProcessor.tcl
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source testbench_pipelinedProcessor.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source testbench_pipelinedProcessor.tcl
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source testbench_pipelinedProcessor.tcl
+save_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top tbHazard [get_filesets sim_1]
@@ -54,10 +91,4 @@ open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/
 source tbHazard.tcl
 relaunch_sim
 save_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
-close_sim
-launch_simulation
-open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
-open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
-open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
-source tbHazard.tcl
 close_sim

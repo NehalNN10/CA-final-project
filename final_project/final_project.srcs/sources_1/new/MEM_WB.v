@@ -48,7 +48,7 @@ module MEM_WB(
             Rd_MEM_WB <= Rd_EX_MEM;
             Read_Data_MEM_WB <= Read_Data;
             Result_MEM_WB <= Result_EX_MEM; 
-//            Rd_MEM_WB <= Rd_EX_MEM;
+            Rd_MEM_WB <= Rd_EX_MEM;
         end 
     end
 endmodule

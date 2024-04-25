@@ -104,7 +104,7 @@ module hazardProcessor(
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module
-    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(Branch), .Zero(sel_Branch), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
+    EX_MEM EXMEM(.clk(clk), .reset(reset), .Branch(ID_EX_Branch), .Zero(sel_Branch), .MemRead(ID_EX_MemRead), .MemWrite(ID_EX_MemWrite), .MemtoReg(ID_EX_MemtoReg), 
     .RegWrite(ID_EX_RegWrite), .Adder_Out_2(adder_out2), .Result(Result), .Write_Data(mux_ReadData2), .RD(ID_EX_RD),
     .EX_MEM_Branch(EX_MEM_Branch), .EX_MEM_Zero(EX_MEM_Zero), .EX_MEM_MemRead(EX_MEM_MemRead), .EX_MEM_MemWrite(EX_MEM_MemWrite), 
     .EX_MEM_MemtoReg(EX_MEM_MemtoReg), .EX_MEM_RegWrite(EX_MEM_RegWrite), .EX_MEM_Adder_Out_2(EX_MEM_Adder_Out_2), 
