@@ -3,13 +3,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage[utf8]{inputenc}
 % \usepackage{float}
 % \usepackage{geometry}
 % \usepackage{amssymb}
 % \usepackage{amsthm}
 % \usepackage{amsmath}
-% \usepackage{graphicx}
+\usepackage{graphicx}
+\graphicspath{{images/}}
 \usepackage[breaklinks]{hyperref}
 \usepackage{listings}
 % \usepackage{pdfpages}
@@ -109,35 +111,37 @@ The objective of this project was to build a 5-stage pipelined processor capable
 This is our bubble sort algorithm in RISC-V assembly code:
 
 \begin{verbatim}
+li x10 0x4
+li x11 5
+li x3, -1
+
 li x15 4
 li x16 3
 li x17 5
 li x18 2
 li x19 1
 
-li x10 0x100
-li x11 5
-
-sw x15 0(x10)
-sw x16 4(x10)
-sw x17 8(x10)
-sw x18 12(x10)
-sw x19 16(x10)
+sd x15 0(x10)
+sd x16 8(x10)
+sd x17 16(x10)
+sd x18 24(x10)
+sd x19 32(x10)
 
 bubble:
-    li x6, 0 # i = 0 initially
+	li x6, 0 # i = 0 initially
     outer:
     	beq x6, x11, exit # if i == 5 then exit
-        sub x7, x5, x6 # x7 stores len(array) - i
+        sub x2, x11, x6 # x2 stores len(array) - i
+        add x7, x2, x3 # x7 - 1
         li x8, 0 # j = 0 every loop
         inner:
-        	beq x8, x7, innerexit
-            slli x9, x8, 2 # multiply by 4 to get next address
+            beq x8, x7, innerexit
+            slli x9, x8, 3 # multiply by 4 to get next address
             # main inner loop stuff here
             add x28, x10, x9 # mem address of arr[j]
-            addi x29, x28, 4 # mem address of arr[j+1]
-            lw x30, 0(x28) # arr[j]
-            lw x31, 0(x29) # arr[j+1]
+            addi x29, x28, 8 # mem address of arr[j+1]
+            ld x30, 0(x28) # arr[j]
+            ld x31, 0(x29) # arr[j+1]
             bge x30, x31, swap
             # end of main stuff
             continue:
@@ -147,8 +151,8 @@ bubble:
         	addi x6, x6, 1 # add 1 to i
         	beq x0, x0, outer # jump back to outer
         swap:
-        	sw x30, 0(x29)
-            sw x31, 0(x28)
+            sd x30, 0(x29)
+            sd x31, 0(x28)
             beq x0, x0, continue
 
 	exit:
@@ -173,11 +177,16 @@ bubble:
 \subsection{Code and Waveform}
 The link for the code can be found \href{https://github.com/NehalNN10/CA-final-project/blob/main/final_project/final_project.srcs/sources_1/new/RISCV_Processor.v}{here}.
 \begin{figure}[h]
-    \centering
-    % \includegraphics[scale = 0.5]{SIngleCycleSimulation.jpg}
-    \caption{Single Cycle Simulation}
-    \label{fig: Single Cycle Simulation}
+    \centerline{\includegraphics[scale = 0.5]{SingleCycle1.jpg}}
+    \caption{Single Cycle Simulation 1}
 \end{figure}
+
+\begin{figure}[h]
+    \centerline{\includegraphics[scale = 0.5]{SingleCycle2.jpg}}
+    \caption{Single Cycle Simulation 2}
+\end{figure}
+
+\newpage
 \subsection{Synopsis}
     To make our sorting algorithm function properly, we introduced changes to the ALU and the final MUX module (by modifying the select line). Additionally, we added a new module called the Branch\_module.
 \newpage
@@ -197,19 +206,18 @@ To implement a pipelined design, the following modules were added to enable the 
 \item Forwarding\_Unit
 \end{itemize}
 
-Each stage passes the data and instructions to the next stage through pipeline registers, which help to ensure the proper timing of the data flow and avoid data hazards. These stages and pipeline registers form the backbone of the pipelined processor's operation.  The forwarding unit facilitates the forwarding of data between pipeline stages to resolve hazards and maintain proper data flow.
+Each stage passes the data and instructions to the next stage through the 4 pipeline registers, which help to ensure the proper timing of the data flow and avoid data hazards. These stages and pipeline registers form the backbone of the pipelined processor's operation. The forwarding unit facilitates the forwarding of data between pipeline stages to resolve hazards and maintain proper data flow.
 
 \subsection{Testing Forwarding Unit}
 
 We upgraded our previously developed processor by implementing a Forwarding Unit, which involved adding the Forward Unit module. The forwarding path was then integrated with the pipeline register modules to ensure efficient data flow between stages of the pipeline. These modifications helped to resolve data hazards that may have arisen during the pipelined execution of instructions.
 \pagebreak
 \subsection{Code and Waveform}
-The link for the code can be found \href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/RISC_V%20Pipelined%20Processor}{here}.
+The link for the code can be found \href{https://github.com/NehalNN10/CA-final-project/blob/5b606f284db6f33765f0c830730e5cee43c01f18/final_project/final_project.srcs/sources_1/new/pipelinedProcessor.v}{here}.
+
 \begin{figure}[h]
-    \centering
-    % \includegraphics[scale = 0.40]{Pipeline_Forwarding_Hazarding.png}
-    \caption{Pipeline with Forwarding}
-    \label{fig: Pipeline with Forwarding}
+    \centerline{\includegraphics[scale = 0.5]{PipelineCycle.jpg}}
+    \caption{Pipelined Cycle Simulation}
 \end{figure}
 
 \section{Task 3}
@@ -224,17 +232,20 @@ In computer architecture, hazards refer to conflicts that arise when attempting 
 
 To address this issue, we added a Hazard Detection Unit module to our processor. This module detects hazards and controls the pipeline by sending signals to flush or stall the pipeline. By adding this module, we improved the processor's efficiency and prevented errors caused by hazards.
 
+
 The Hazard Detection Unit uses the input RS1, RS2, RD and MemRead signal to detect hazards in the pipeline. If a hazard is detected, the module signals the pipeline to either flush or stall the pipeline to prevent incorrect results. With this addition, our processor is better equipped to handle hazards and operate more efficiently.
 
-\subsection{Code and Waveform}
-The link to the code can be found \href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/RISC_V_Pipelined_Complete}{here}.
-\begin{figure}[h]
-    \centering
-    % \includegraphics[scale = 0.5]{Pipelined_RISCV.jpg}
-    \caption{Pipelined RISC-V Processor}
-    \label{fig: Pipelined RISC_V Processor}
-\end{figure}
 
+
+\subsection{Code and Waveform}
+The link to the code can be found \href{https://github.com/NehalNN10/CA-final-project/blob/5b606f284db6f33765f0c830730e5cee43c01f18/final_project/final_project.srcs/sources_1/new/hazardProcessor.v}{here}.
+
+\begin{figure}[h!]
+    \centerline{\includegraphics[scale = 0.5]{Pipelined_RISCV.jpg}}
+    \caption{Pipelined RISC-V Processor}
+
+  \end{figure}
+  
 \subsection{Synopsis}
 
 Although our 5-stage pipelined processor was functioning well, we encountered stalls in our code due to the requirement of the next value of a register in the subsequent line of code. This necessitates a sequential code and environment, causing the processor to pause for several cycles before resuming the sequence.
@@ -262,9 +273,7 @@ Pipelined processors are typically designed to be faster than non-pipelined proc
 
 \chapter{References}
 
-[1] HU-LMS. \textit{Canvas}. [Online] Available: \url{https://hulms.instructure.com/courses/2589/discussion_topics/30774}
-
-\noindent[2] Book. \textit{Course Book}. Computer Organization and Design: The Hardware/Software Interface RISC-V Edition by David A. Patterson, John L. Hennessy
+[1] HU-LMS. Book. \textit{Course Book}. Computer Organization and Design: The Hardware/Software Interface RISC-V Edition by David A. Patterson, John L. Hennessy
 
 \appendix
 \chapter{Appendix}
