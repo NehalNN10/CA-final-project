@@ -1,0 +1,1407 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Apr 26 15:57:37 2024
+# Process ID: 22732
+# Current directory: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25476 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
+# Log file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.log
+# Journal file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Dell/Documents/uni_docs/cs/computer architecture/final_project/final_project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1026.484 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1026.484 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1026.484 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbHazard_behav -key {Behavioral:sim_1:Functional:tbHazard} -tclbatch {tbHazard.tcl} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+WARNING: Simulation object /testbench_RISCV/clk was not found in the design.
+WARNING: Simulation object /testbench_RISCV/reset was not found in the design.
+WARNING: Simulation object /testbench_RISCV/PC_In was not found in the design.
+WARNING: Simulation object /testbench_RISCV/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/WriteData was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Result was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/imm_data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Instruction was not found in the design.
+WARNING: Simulation object /testbench_RISCV/opcode was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rs1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rs2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rd was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/A was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/B was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/Zero was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_RISCV/adder_out1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/adder_out2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Branch was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemRead was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_RISCV/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/addermuxselect was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/clk was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Mem_Addr was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index0 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index3 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index4 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[63] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[62] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[61] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[60] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[59] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[58] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[57] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[56] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[55] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[54] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[53] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[52] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[51] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[50] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[49] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[48] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[47] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[46] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[45] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[44] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[43] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[42] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[41] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[40] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[39] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[38] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[37] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[36] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[35] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[34] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[33] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[32] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[31] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[30] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[29] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[28] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[27] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[26] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[25] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[24] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[23] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[22] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[21] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[20] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[19] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[18] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[17] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[16] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[15] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[14] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[13] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[12] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[11] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[10] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[9] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[8] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[7] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[6] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[5] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[4] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[3] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[2] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[1] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[0] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/i was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index0 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index3 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index4 was not found in the design.
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+WARNING: Simulation object /testbench_pipelinedProcessor/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/PC_In was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/adder_out1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/adder_out2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/imm_data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardA was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rd was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rs1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rs2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Inst_Address was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/inst_mem was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/PC_In was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Inst_Address was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/inst_mem was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Funct3 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Funct7 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/ld_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sd_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/br_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/ld_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sd_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/br_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/Opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/i was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardA was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/Operation was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Adder_Out_2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Adder_Out_2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Mem_Addr was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index0 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index3 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index4 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/i was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Result_EX_MEM was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Rd_EX_MEM was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/MemtoReg_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/RegWrite_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Read_Data_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Result_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Rd_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/Out was not found in the design.
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source tbHazard.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1026.484 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbHazard_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1026.484 ; gain = 0.000
+run 1 us
+run 1 us
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1026.484 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1026.484 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1026.484 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1026.484 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 1026.484 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 1552.137 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 1552.137 ; gain = 0.000
+run 1 us
+run 1 us
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1552.137 ; gain = 0.000
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 1552.137 ; gain = 0.000
+run 1 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tbHazard' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tbHazard_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU64bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU64bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Branch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Branch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Hazard_Detection_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Imm_Gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Mux_3x1_64Bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazardProcessor
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'PC_In' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:18]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Instruction' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:20]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'opcode' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:21]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'rd' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:22]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'ALUOp' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:25]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Branch' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:26]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'index0' is not allowed [C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sources_1/new/hazardProcessor.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.srcs/sim_1/new/tb_Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tbHazard
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+"xelab -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2d87f27d44564ed9b8e24b103fb36c6a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tbHazard_behav xil_defaultlib.tbHazard xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IF_ID
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Hazard_Detection
+Compiling module xil_defaultlib.Imm_Gen
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.Branch_unit
+Compiling module xil_defaultlib.ID_EX
+Compiling module xil_defaultlib.Forwarding_Unit
+Compiling module xil_defaultlib.Mux_3x1
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU64bit
+Compiling module xil_defaultlib.EX_MEM
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.MEM_WB
+Compiling module xil_defaultlib.hazardProcessor
+Compiling module xil_defaultlib.tbHazard
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tbHazard_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tbHazard_behav -key {Behavioral:sim_1:Functional:tbHazard} -tclbatch {tbHazard.tcl} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}} -view {{C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
+WARNING: Simulation object /testbench_RISCV/clk was not found in the design.
+WARNING: Simulation object /testbench_RISCV/reset was not found in the design.
+WARNING: Simulation object /testbench_RISCV/PC_In was not found in the design.
+WARNING: Simulation object /testbench_RISCV/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/WriteData was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Result was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/imm_data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Instruction was not found in the design.
+WARNING: Simulation object /testbench_RISCV/opcode was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rs1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rs2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/rd was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/A was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/B was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/Zero was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_RISCV/adder_out1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/adder_out2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/Branch was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemRead was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_RISCV/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_RISCV/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/addermuxselect was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/clk was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Mem_Addr was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index0 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index3 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/index4 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[63] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[62] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[61] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[60] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[59] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[58] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[57] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[56] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[55] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[54] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[53] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[52] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[51] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[50] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[49] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[48] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[47] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[46] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[45] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[44] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[43] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[42] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[41] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[40] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[39] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[38] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[37] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[36] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[35] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[34] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[33] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[32] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[31] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[30] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[29] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[28] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[27] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[26] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[25] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[24] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[23] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[22] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[21] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[20] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[19] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[18] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[17] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[16] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[15] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[14] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[13] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[12] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[11] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[10] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[9] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[8] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[7] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[6] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[5] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[4] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[3] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[2] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[1] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/DataMemory[0] was not found in the design.
+WARNING: Simulation object /testbench_RISCV/riscv/DM/i was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index0 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index1 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index2 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index3 was not found in the design.
+WARNING: Simulation object /testbench_RISCV/index4 was not found in the design.
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+WARNING: Simulation object /testbench_pipelinedProcessor/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/PC_In was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/adder_out1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/adder_out2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/imm_data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardA was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rd was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rs1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/rs2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Inst_Address was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/inst_mem was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A1/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxfirst/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/PC_In was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/PC/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Inst_Address was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IM/inst_mem was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/PC_Out_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IFID/Instruction_IF_ID was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Funct3 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IP/Funct7 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Instruction was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/Imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/ld_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sd_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/br_imm was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/ld_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/sd_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Immgen/br_ins was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/Opcode was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/cu/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/WriteData was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/Registers was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/rf/i was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ALUSrc was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_PC_Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_ReadData2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Imm_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/IDEX/ID_EX_Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/A2/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ID_EX_RS2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/MEM_WB_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardA was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/FU/ForwardB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_A/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/C was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/sel was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/Mux_3x1_B/O was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxmid/Out was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/Funct was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/aluc/Operation was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/ALUOp was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/ALU/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Adder_Out_2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Branch was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Zero was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Adder_Out_2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Result was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/EXMEM/EX_MEM_RD was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/MemWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/MemRead was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Mem_Addr was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Write_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index0 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index1 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index2 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index3 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/index4 was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/DataMemory was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/DM/i was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/clk was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/reset was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/MemtoReg was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/RegWrite was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Read_Data was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Result_EX_MEM was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Rd_EX_MEM was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/MemtoReg_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/RegWrite_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Read_Data_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Result_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/MEMWB/Rd_MEM_WB was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/A was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/B was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/S was not found in the design.
+WARNING: Simulation object /testbench_pipelinedProcessor/pipeline/muxlast/Out was not found in the design.
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+source tbHazard.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1552.137 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tbHazard_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1552.137 ; gain = 0.000
+run 1 us
+run 1 us
+save_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 16:50:35 2024...
