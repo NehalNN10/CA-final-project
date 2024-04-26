@@ -194,9 +194,10 @@ To implement a pipelined design, the following modules were added to enable the 
 \item ID\_EX
 \item EX\_MEM
 \item MEM\_WB
+\item Forwarding\_Unit
 \end{itemize}
 
-Each stage passes the data and instructions to the next stage through pipeline registers, which help to ensure the proper timing of the data flow and avoid data hazards. These stages and pipeline registers form the backbone of the pipelined processor's operation.
+Each stage passes the data and instructions to the next stage through pipeline registers, which help to ensure the proper timing of the data flow and avoid data hazards. These stages and pipeline registers form the backbone of the pipelined processor's operation.  The forwarding unit facilitates the forwarding of data between pipeline stages to resolve hazards and maintain proper data flow.
 
 \subsection{Testing Forwarding Unit}
 
@@ -223,7 +224,7 @@ In computer architecture, hazards refer to conflicts that arise when attempting 
 
 To address this issue, we added a Hazard Detection Unit module to our processor. This module detects hazards and controls the pipeline by sending signals to flush or stall the pipeline. By adding this module, we improved the processor's efficiency and prevented errors caused by hazards.
 
-The Hazard Detection Unit uses the input flush and stalls to detect hazards in the pipeline. If a hazard is detected, the module signals the pipeline to either flush or stall the pipeline to prevent incorrect results. With this addition, our processor is better equipped to handle hazards and operate more efficiently.
+The Hazard Detection Unit uses the input RS1, RS2, RD and MemRead signal to detect hazards in the pipeline. If a hazard is detected, the module signals the pipeline to either flush or stall the pipeline to prevent incorrect results. With this addition, our processor is better equipped to handle hazards and operate more efficiently.
 
 \subsection{Code and Waveform}
 The link to the code can be found \href{https://github.com/AliMuhammadAsad/Computer-Architecture-Spring-23/tree/main/RISC_V_Pipelined_Complete}{here}.
