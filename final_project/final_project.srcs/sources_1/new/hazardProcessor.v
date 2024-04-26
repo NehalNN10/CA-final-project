@@ -60,6 +60,7 @@ module hazardProcessor(
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
     Mux_2x1 muxfirst(.A(adder_out1), .B(EX_MEM_Adder_Out_2), .S(EX_MEM_Zero && EX_MEM_Branch), .Out(PC_In));
+//    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_Branch && ID_EX_Branch), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .stall(stall), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -92,7 +93,7 @@ module hazardProcessor(
     .ID_EX_RS1(ID_EX_RS1), .ID_EX_RS2(ID_EX_RS2), .ID_EX_RD(ID_EX_RD),.ID_EX_Funct(ID_EX_Funct), .ID_EX_Funct3(ID_EX_Funct3));
     
     // Execute (EX) / Address Calculation  
-    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data*2), .Out(adder_out2));
+    Adder A2(.A(ID_EX_PC_Out), .B(ID_EX_Imm_Data<<1), .Out(adder_out2));
     Forwarding_Unit FU(ID_EX_RS1, ID_EX_RS2, EX_MEM_RD, MEM_WB_RD, EX_MEM_RegWrite, MEM_WB_RegWrite,
     ForwardA, ForwardB);
     Mux_3x1 Mux_3x1_A(.A(ID_EX_ReadData1), .B(WriteData), .C(EX_MEM_Result), .sel(ForwardA), .O(mux_ReadData1));
@@ -100,7 +101,7 @@ module hazardProcessor(
     Mux_2x1 muxmid(.A(ID_EX_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
 //    Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ALUSrc), .Out(muxmid_out));
     ALU_Control aluc(.ALUOp(ID_EX_ALUOp), .Funct(ID_EX_Funct), .Operation(Operation));
-    Branch_unit BU(.Funct3(ID_EX_Funct3), .ReadData1(mux_ReadData1), .ReadData2(mux_ReadData2), .addermuxselect(sel_Branch));
+    Branch_unit BU(.Funct3(ID_EX_Funct3), .ReadData1(mux_ReadData1), .ReadData2(mux_ReadData2), .addermuxselect(sel_Branch), .stall(stall));
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module

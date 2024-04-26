@@ -1,11 +1,12 @@
+li x10 0x4
+li x11 5
+li x3, -1
+
 li x15 4
 li x16 3
 li x17 5
 li x18 2
 li x19 1
-
-li x10 0x4
- li x11 5
 
 sw x15 0(x10)
 sw x16 4(x10)
@@ -17,7 +18,8 @@ bubble:
 	li x6, 0 # i = 0 initially
     outer:
     	beq x6, x11, exit # if i == 5 then exit
-        sub x7, x5, x6 # x7 stores len(array) - i
+        sub x2, x11, x6 # x2 stores len(array) - i
+        add x7, x2, x3 # x7 - 1
         li x8, 0 # j = 0 every loop
         inner:
         	beq x8, x7, innerexit

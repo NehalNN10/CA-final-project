@@ -27,11 +27,11 @@ module Data_Memory(
     input [63:0] Write_Data,
     output reg [63:0] Read_Data,
     //
-	output [63:0] index0,
-    output [63:0] index1,
-    output [63:0] index2,
-    output [63:0] index3,
-    output [63:0] index4
+	output reg [63:0] index0,
+    output reg [63:0] index1,
+    output reg [63:0] index2,
+    output reg [63:0] index3,
+    output reg [63:0] index4
     );
 
     reg [7:0] DataMemory [63:0];
@@ -79,6 +79,11 @@ module Data_Memory(
 			DataMemory[Mem_Addr+6] <= Write_Data[55:48];
 			DataMemory[Mem_Addr+7] <= Write_Data[63:56];
 		end
+		index0 <= DataMemory[12];
+		index1 <= DataMemory[20];
+		index2 <= DataMemory[28];
+		index3 <= DataMemory[36];
+		index4 <= DataMemory[44];
 	end
 
 endmodule
