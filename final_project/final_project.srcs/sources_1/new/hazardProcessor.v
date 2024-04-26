@@ -60,7 +60,7 @@ module hazardProcessor(
     
     Adder A1(.A(PC_Out), .B(64'd4), .Out(adder_out1));
 //    Mux_2x1 muxfirst(.A(adder_out1), .B(EX_MEM_Adder_Out_2), .S(EX_MEM_Zero && EX_MEM_Branch), .Out(PC_In));
-    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_Branch && ID_EX_Branch), .Out(PC_In));
+    Mux_2x1 muxfirst(.A(adder_out1), .B(adder_out2), .S(sel_Branch && Branch), .Out(PC_In));
     Program_Counter PC(.clk(clk), .reset(reset), .stall(stall), .PC_In(PC_In), .PC_Out(PC_Out));
     Instruction_Memory IM(.Inst_Address(PC_Out), .Instruction(Instruction));
     
@@ -77,10 +77,10 @@ module hazardProcessor(
     Hazard_Detection HD( .RS1(rs1), .RS2(rs2), .Rd_ID_EX(ID_EX_RD), .MemRead_ID_EX(ID_EX_MemRead), .stall(stall));
 //    Imm_Gen Immgen(.Instruction(Instruction), .Imm(imm_data));
     Imm_Gen Immgen(.Instruction(IF_ID_Instruction), .Imm(imm_data));
-    Adder A2(.A(IF_ID_PC_Out), .B(ID_EX_Imm_Data<<1), .Out(adder_out2));
-    
+    Adder A2(.A(IF_ID_PC_Out), .B(imm_data<<1), .Out(adder_out2));
     RegisterFile rf(.clk(clk), .reset(reset), .WriteData(WriteData), .RS1(rs1), .RS2(rs2), .RD(MEM_WB_RD), 
     .RegWrite(MEM_WB_RegWrite), .ReadData1(ReadData1), .ReadData2(ReadData2));
+    Branch_unit BU(.Funct3(funct3), .ReadData1(ReadData1), .ReadData2(ReadData2), .addermuxselect(sel_Branch));
     assign Funct = {Instruction[30], Instruction[14:12]};
     
     //ID/EX Pipeline Register Module
@@ -101,7 +101,6 @@ module hazardProcessor(
     Mux_2x1 muxmid(.A(ID_EX_ReadData2), .B(ID_EX_Imm_Data), .S(ID_EX_ALUSrc), .Out(muxmid_out));
 //    Mux_2x1 muxmid(.A(mux_ReadData2), .B(ID_EX_Imm_Data), .S(ALUSrc), .Out(muxmid_out));
     ALU_Control aluc(.ALUOp(ID_EX_ALUOp), .Funct(ID_EX_Funct), .Operation(Operation));
-    Branch_unit BU(.Funct3(ID_EX_Funct3), .ReadData1(mux_ReadData1), .ReadData2(mux_ReadData2), .addermuxselect(sel_Branch));
     ALU64bit ALU(.A(mux_ReadData1), .B(muxmid_out), .ALUOp(Operation), .Zero(Zero), .Result(Result));
     
     //EX/MEM Pipeline Register Module

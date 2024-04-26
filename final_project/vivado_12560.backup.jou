@@ -2,22 +2,26 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Apr 22 13:14:58 2024
-# Process ID: 20300
+# Start of session at: Fri Apr 26 12:27:27 2024
+# Process ID: 12560
 # Current directory: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21304 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4248 C:\Users\Shafqat Ali Khan\Documents\GitHub\proj\final_project\final_project.xpr
 # Log file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/vivado.log
 # Journal file: C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/final_project.xpr}
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testbench_pipelinedProcessor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
 launch_simulation
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_RISCV_behav.wcfg}
 open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/testbench_pipelinedProcessor_behav.wcfg}
+open_wave_config {C:/Users/Shafqat Ali Khan/Documents/GitHub/proj/final_project/waow.wcfg}
 source testbench_pipelinedProcessor.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
 close_sim

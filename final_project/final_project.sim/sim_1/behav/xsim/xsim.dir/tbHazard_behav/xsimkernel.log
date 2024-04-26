@@ -1,4 +1,4 @@
-Running: xsim.dir/tbHazard_behav/xsimk.exe -simmode gui -wdb tbHazard_behav.wdb -simrunnum 0 -socket 49358
+Running: xsim.dir/tbHazard_behav/xsimk.exe -simmode gui -wdb tbHazard_behav.wdb -simrunnum 0 -socket 52214
 Design successfully loaded
-Design Loading Memory Usage: 7716 KB (Peak: 7716 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 6860 KB (Peak: 6860 KB)
+Design Loading CPU Usage: 0 ms

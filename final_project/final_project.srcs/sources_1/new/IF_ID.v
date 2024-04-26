@@ -30,15 +30,10 @@ module IF_ID(
     
     always @(posedge clk or posedge reset) 
     begin
-        if (reset == 1)     //reset values to 0 if reset initiated
+        if (reset == 1 || stall == 1)     //reset values to 0 if reset initiated
             begin
                 Instruction_IF_ID <= 0; 
                 PC_Out_IF_ID <= 0;
-            end
-         else if (stall == 1) 
-            begin
-                PC_Out_IF_ID <= PC_Out_IF_ID; 
-                Instruction_IF_ID <= Instruction_IF_ID;
             end
         else                //forward values to register otherwise
             begin

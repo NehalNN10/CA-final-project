@@ -1,4 +1,7 @@
-Running: xsim.dir/testbench_pipelinedProcessor_behav/xsimk.exe -simmode gui -wdb testbench_pipelinedProcessor_behav.wdb -simrunnum 0 -socket 62354
+Running: xsim.dir/testbench_pipelinedProcessor_behav/xsimk.exe -simmode gui -wdb testbench_pipelinedProcessor_behav.wdb -simrunnum 0 -socket 50592
 Design successfully loaded
-Design Loading Memory Usage: 6880 KB (Peak: 6880 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 6868 KB (Peak: 6868 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7772 KB (Peak: 7772 KB)
+Simulation CPU Usage: 61 ms
