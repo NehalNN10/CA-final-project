@@ -23,8 +23,8 @@ module Branch_unit(
    input [2:0] Funct3,
    input [63:0] ReadData1,
    input [63:0] ReadData2,
-   output reg addermuxselect,
-   output reg stall
+   output reg addermuxselect
+//   output reg stall
   );
   
   initial
@@ -58,11 +58,11 @@ module Branch_unit(
           end    
       endcase
      end
-  always @(*)
-  begin
-    if (addermuxselect)
-        stall <= 1'b1;
-    else
-        stall <= 1'b0;
-  end
+//  always @(*)
+//  begin
+//    if (addermuxselect)
+//        stall <= 1'b1;
+//    else
+//        stall <= 1'b0;
+//  end
 endmodule
